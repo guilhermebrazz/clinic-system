@@ -1,3 +1,5 @@
+using ClinicSystem.Domain.Exceptions;
+
 namespace ClinicSystem.Domain.ValueObjects;
 
 public class Money
@@ -6,6 +8,10 @@ public class Money
 
     public Money(double amount)
     {
+        if(amount < 0.0)
+        {
+            throw new InvalidAmountException("Insert a not negative amount.");
+        }
         Amount = amount;
     }
 
