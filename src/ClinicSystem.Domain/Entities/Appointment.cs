@@ -1,7 +1,4 @@
-using ClinicSystem.Domain.ValueObjects;
 using ClinicSystem.Domain.Enums;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
 
 namespace ClinicSystem.Domain.Entities;
 

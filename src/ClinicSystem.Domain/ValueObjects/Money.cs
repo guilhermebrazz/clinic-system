@@ -17,6 +17,10 @@ public class Money
 
     public void Add(double qtd)
     {
+        if(qtd < 0.0)
+        {
+            throw new InvalidAmountException("Insert a not negative amount.");
+        }
         Amount += qtd;
     }
 

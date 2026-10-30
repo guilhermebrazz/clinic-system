@@ -1,4 +1,5 @@
 using ClinicSystem.Domain.ValueObjects;
+using ClinicSystem.Domain.Exceptions;
 
 namespace ClinicSystem.Domain.Entities;
 
@@ -12,6 +13,10 @@ public class Patient : User
 
     public Patient(string name, string email, string phone, Address address, Cpf cpf, DateTime birthDate) :base(name, email, phone, address, cpf)
     {
+        if (birthDate > DateTime.Now)
+        {
+            throw new InvalidBirhdateException("The date of birth cannot be later than the current date.");
+        }
         BirhtDate = birthDate;
     }
 
