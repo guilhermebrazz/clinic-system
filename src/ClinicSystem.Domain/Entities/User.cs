@@ -7,7 +7,7 @@ public abstract class User
     public Guid Id { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
-    public string Phone { get; set; }
+    public Phone Phone { get; set; }
     public Address Address { get; set; }
     public Cpf Cpf { get; set; }
 
@@ -15,7 +15,7 @@ public abstract class User
     {
     }
 
-    public User(string name, string email, string phone, Address address, Cpf cpf)
+    public User(string name, string email, Phone phone, Address address, Cpf cpf)
     {
         Name = name;
         Email = email;

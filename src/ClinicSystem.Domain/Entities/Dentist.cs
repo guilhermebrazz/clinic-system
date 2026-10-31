@@ -12,7 +12,7 @@ public class Dentist : User
     {
     }
 
-    public Dentist(string name, string email, string phone, Address address, Cpf cpf) :base(name, email, phone, address, cpf)
+    public Dentist(string name, string email, Phone phone, Address address, Cpf cpf) :base(name, email, phone, address, cpf)
     {
     }
 

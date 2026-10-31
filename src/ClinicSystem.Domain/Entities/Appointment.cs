@@ -5,13 +5,17 @@ namespace ClinicSystem.Domain.Entities;
 public class Appointment
 {
     public Guid Id { get; set; }
+    public Dentist Dentist { get; set; }
+    public Patient Patient { get; set; }
     public List<Procedure> Procedures { get; set; } = new List<Procedure>();
     public AppointmentStatus Status { get; set; }
     public TimeSpan TimeSlot { get; set; } = TimeSpan.FromMinutes(30);
 
     
-    public Appointment(AppointmentStatus status)
+    public Appointment(Dentist dentist, Patient patient, AppointmentStatus status)
     {
+        Dentist = dentist;
+        Patient = patient;
         Status = status;
     }
 

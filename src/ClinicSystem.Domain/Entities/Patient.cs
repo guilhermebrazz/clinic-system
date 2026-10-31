@@ -11,11 +11,16 @@ public class Patient : User
     {
     }
 
-    public Patient(string name, string email, string phone, Address address, Cpf cpf, DateTime birthDate) :base(name, email, phone, address, cpf)
+    public Patient(string name, string email, Phone phone, Address address, Cpf cpf, DateTime birthDate) :base(name, email, phone, address, cpf)
     {
         if (birthDate > DateTime.Now)
         {
             throw new InvalidBirhdateException("The date of birth cannot be later than the current date.");
+        }
+
+        if (email.Contains("@") == false)
+        {
+            throw new InvalidEmailException("The email address must include the @ caracter");
         }
         BirhtDate = birthDate;
     }
