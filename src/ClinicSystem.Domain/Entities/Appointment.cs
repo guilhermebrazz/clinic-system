@@ -1,4 +1,5 @@
 using ClinicSystem.Domain.Enums;
+using ClinicSystem.Domain.ValueObjects;
 
 namespace ClinicSystem.Domain.Entities;
 
@@ -9,14 +10,15 @@ public class Appointment
     public Patient Patient { get; set; }
     public List<Procedure> Procedures { get; set; } = new List<Procedure>();
     public AppointmentStatus Status { get; set; }
-    public TimeSpan TimeSlot { get; set; } = TimeSpan.FromMinutes(30);
+    public TimeSlot TimeSlot { get; set; }
 
     
-    public Appointment(Dentist dentist, Patient patient, AppointmentStatus status)
+    public Appointment(Dentist dentist, Patient patient, AppointmentStatus status, TimeSlot timeSlot)
     {
         Dentist = dentist;
         Patient = patient;
         Status = status;
+        TimeSlot = timeSlot;
     }
 
     public void AddProcedure(Procedure procedure)

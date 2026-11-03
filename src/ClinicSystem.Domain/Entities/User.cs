@@ -11,10 +11,6 @@ public abstract class User
     public Address Address { get; set; }
     public Cpf Cpf { get; set; }
 
-    public User()
-    {
-    }
-
     public User(string name, string email, Phone phone, Address address, Cpf cpf)
     {
         Name = name;

@@ -7,9 +7,6 @@ public class Patient : User
 {
     public DateTime BirhtDate { get; set; }
     
-    public Patient()
-    {
-    }
 
     public Patient(string name, string email, Phone phone, Address address, Cpf cpf, DateTime birthDate) :base(name, email, phone, address, cpf)
     {

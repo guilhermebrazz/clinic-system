@@ -6,8 +6,8 @@ public class SurgicalProcedure : Procedure
 {
     public int RecoveryDays { get; set; }   
 
-    public SurgicalProcedure(string name, TimeSpan duration, Enums.Specialty requiredSpecialty, Money money, int recoveryDays) 
-        :base(name, duration, requiredSpecialty, money)
+    public SurgicalProcedure(string name, Enums.Specialty requiredSpecialty, Money money, int recoveryDays) 
+        :base(name, requiredSpecialty, money)
     {
         RecoveryDays = recoveryDays;
     }

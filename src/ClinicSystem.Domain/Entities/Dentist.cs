@@ -8,9 +8,6 @@ public class Dentist : User
 {
     public List<Specialty> Specialties { get; set; } = new List<Specialty>();
 
-    public Dentist()
-    {
-    }
 
     public Dentist(string name, string email, Phone phone, Address address, Cpf cpf) :base(name, email, phone, address, cpf)
     {

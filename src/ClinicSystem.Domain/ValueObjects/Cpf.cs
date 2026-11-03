@@ -13,12 +13,12 @@ public class Cpf
             throw new InvalidCpfException("The CPF number must contain 11 digits. (Only Numbers)");
         }
 
-        Value = value;
+        Value = Format(value);
     }
 
-    public string Format() // 000.000.000-00
+    public string Format(string value) // 000.000.000-00
     {
-        string formatedCpf = Value.Insert(3, ".").Insert(7, ".").Insert(11, "-");
-        return formatedCpf;
+        return value.Insert(3, ".").Insert(7, ".").Insert(11, "-");
+        
     }
 }

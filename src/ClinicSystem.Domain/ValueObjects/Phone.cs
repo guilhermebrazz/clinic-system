@@ -8,10 +8,6 @@ namespace ClinicSystem.Domain.ValueObjects
     public class Phone
     {
         public string Value { get; set; }
-
-        public Phone()
-        {
-        }
         
         public Phone(string value)
         {   

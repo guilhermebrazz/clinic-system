@@ -14,15 +14,9 @@ public abstract class Procedure
     public Money Money { get; set; }
 
 
-    public Procedure(string name, TimeSpan duration, Specialty requiredSpecialty, Money money)
+    public Procedure(string name, Specialty requiredSpecialty, Money money)
     {
-        if (duration < TimeSpan.Zero)
-        {
-            throw new InvalidDurationException("The procedure duration must be positive.");
-        }
-
         Name = name;
-        Duration = duration;
         RequiredSpecialty = requiredSpecialty;
         Money = money;
     }
